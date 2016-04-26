@@ -76,7 +76,7 @@ def changePhpIni( iniPath ):
     try:
         r = re.compile('auto_prepend_file\s=\s(.*)').findall(t)
         if len(r)==1:
-            t = t.replace(r[0],'')
+        t = t.replace(r[0],'')
         t = t.replace('auto_prepend_file =','auto_prepend_file = "/tmp/vdun/inject.php"')
         t = t.replace('allow_url_fopen = On','allow_url_fopen = Off')
         r = re.compile(';include_path\s=\s"\.:.*"|include_path\s=\s"\.:.*"').findall(t)
