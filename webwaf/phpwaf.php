@@ -1,8 +1,10 @@
 <?php
 error_reporting(0);
+date_default_timezone_set('PRC');
+
 header('Content-Type: text/html; charset=utf-8');
 header('PHPWAF:By_Virink');
-date_default_timezone_set('PRC');
+
 define('PASSWORD', "virink");
 define('DB_HOST', "localhost");
 define('DB_USER', "root");
@@ -94,12 +96,6 @@ class VPhpWaf {
             $var=addslashes($var);
         }
         return $var;
-    }
-
-    function debugop($var){
-        echo "<pre>";
-        print_r($var);
-        echo "</pre>";
     }
 
     function install(){
