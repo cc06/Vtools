@@ -51,7 +51,13 @@ function waf()
 
 function log($var){
     file_put_contents("log.txt", print_r($var), FILE_APPEND);
-    //die();
+    // die
+    // die();
+    //
+    // unset
+    // unset($_GET);
+    // unset($_POST);
+    // unset($_COOKIE);
 }
 waf();
 ?>
